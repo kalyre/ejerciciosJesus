@@ -1,0 +1,61 @@
+//
+// Simplify using SCSS sintax. Use http://www.sassmeister.com/
+//
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  height: 50px;
+
+
+  .logged-user {
+    padding: 20px;
+  
+
+    .avatar {
+      display: block;
+      widht: 100px;
+      
+      i {
+        color: #888;
+        line-height: 100px;
+      }
+    }
+      
+    .controls {
+      position: absolute;
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 20px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    height: 100%;
+    
+    li {
+      position: relative;
+      line-height: 50px;
+      
+      &.current {
+        background: silver;
+      }
+      
+      &:first-child {
+        border-top: 1px solid silver;
+      }
+      
+      i {
+        line-height: 50px;
+        font-size: 14pt;
+      }
+    }
+  }
+}
