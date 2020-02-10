@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ratings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button icon-start color="success" (click)="pizzaClicked()">
+    <ion-icon name="pizza"></ion-icon>
+    &nbsp;{{ pizza }}
+  </ion-button>
+
+  <ion-button icon-start color="danger" (click)="sadFaceClicked()">
+    <ion-icon name="sad"></ion-icon>    
+    &nbsp;{{ sadFace }}
+  </ion-button>
+  <div margin-top>
+    Average: {{ average() }}/10
+  </div>  
+
+  <!-- 2 -->
+  <ion-card>
+    <ion-card-header>
+      <ion-button color="primary" (click)="toggleExpand()">
+        <ion-icon name="{{ icon }}"></ion-icon>
+      </ion-button>
+       Consejo Jedi
+    </ion-card-header>
+    <ion-card-content [hidden]="!isExpanded"> 
+      <img src="assets/images/jediCouncil.jpg"/>
+    </ion-card-content>
+  </ion-card>
+  
+  <!-- 3 -->
+  <form>
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Birthdate</ion-label>
+      <ion-datetime></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Sex</ion-label>
+      <ion-select>
+        <ion-select-option value="male">Male</ion-select-option>
+        <ion-select-option value="female">Female</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Phone</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+  </form>
+</ion-content>
