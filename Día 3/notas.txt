@@ -1,0 +1,15 @@
+Ejercicio 1:
+============
+
+Bien en general, salvo algunas mejoras:
+
+- Se está utilizando el método .map para copiar el array. Se puede hacer:
+  this.restoreFruits = [...this.fruits] por ejemplo.
+
+- Es mala práctica hacer interpolación de variables en el template, dentro de un atributo:
+  src="assets/images/fruits/{{ fruit.image }}" ==> [src]="'assets/images/fruits/' + fruit.image"
+
+Ejercicio 2:
+============
+
+Bastante bien. Algunas mejoras posibles pero no destacables. Buen trabajo.
